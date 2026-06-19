@@ -227,10 +227,11 @@
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.1);
             color: var(--texto-claro);
-            padding: 12px;
+            padding: 14px 18px;
             border-radius: 8px;
             cursor: pointer;
             font-weight: 500;
+            font-size: 15px;
             transition: all 0.25s ease;
         }
 
@@ -432,7 +433,7 @@
         <div class="nav-container">
             <!-- A imagem da logo aplicada com a tag IMG oficial -->
             <a href="#" class="logo-box">
-                <img src="watermarked_img_10812197643312794966.png" alt="VoxelLab Logo" class="logo-img">
+                <img src="logo empresa.png" alt="VoxelLab Logo" class="logo-img" style="width: 150px; height: auto; filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.5));">
             </a>
             <nav>
                 <ul>
@@ -454,7 +455,14 @@
         </div>
         <div class="hero-img-container">
             <!-- Renderização da Interface Tridimensional de Demonstração -->
-            <img src="watermarked_img_10812197643312794966.png" alt="VoxelLab Interface Mockup" class="mockup-interface">
+            <img src="leafeonmodel.jpeg" alt="Demonstração Peça 3D" style="
+                width: 350px; 
+                height: 350px; 
+                object-fit: cover; 
+                border-radius: 20px; 
+                border: 2px solid rgba(0, 210, 255, 0.3); 
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+">
         </div>
     </section>
 
@@ -488,12 +496,19 @@
 
                 <div class="grupo-opcao">
                     <label>Resolução da Camada</label>
+                    <style>
+                        .slider-container .btn-opcao {
+                            padding: 12px 24px; /* aumenta o tamanho dos botões para melhor usabilidade */
+                            font-size: 14px; /*tamanho da fonto dos botoes*/
+                            margin: 5px  /*garante um espaco entre os botoes*/;
+                        }
+                    </style>
+
                     <div class="slider-container">
-                        <input type="range" class="custom-slider" min="12" max="28" step="8" value="20" id="resSlider" oninput="atualizarRes(this)">
-                        <div class="slider-labels">
-                            <span>Ultra Detalhado (0.12mm)</span>
-                            <span id="resValue" style="color: var(--azul-neon); font-weight: bold;">Normal (0.20mm)</span>
-                            <span>Rápido (0.28mm)</span>
+                        <div class="detalhes" style="text-align: center;">
+                            <button class="btn-opcao active"  onclick="selecionarBotao(this)">Detalhado (0.12mm)</button>
+                            <button class="btn-opcao"  onclick="selecionarBotao(this)">Normal (0.20mm)</button>
+                            <button class="btn-opcao" onclick="selecionarBotao(this)">Rápido (0.28mm)</button>
                         </div>
                     </div>
                 </div>
@@ -531,10 +546,10 @@
         <div class="contato-barra">
             <h3>Contato</h3>
             <div class="canais-comunicacao">
-                <a href="https://wa.me/5511999999999" target="_blank" class="link-contato">
+                <a href="#" target="_blank" class="link-contato">
                     <span class="icon-circle"></span> WhatsApp
                 </a>
-                <a href="mailto:contato@voxellab.com.br" class="link-contato">
+                <a href="#" class="link-contato">
                     <span class="icon-circle"></span> E-mail
                 </a>
                 <a href="#" class="link-contato">
@@ -591,6 +606,8 @@
                 document.getElementById('resumoArquivo').style.color = "#00d2ff";
             }
         }
+
+        
     </script>
 </body>
 </html>
